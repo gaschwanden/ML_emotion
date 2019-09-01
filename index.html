@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- We are loading first the dependancies -->
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <!-- Load mobile net classifier -->
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <!-- Load pretrained classifier -->
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+  </head>
+  <body>
+    <div id="console"></div>
+    <head>
+      <h1>
+        AI learns your emotions
+      </h1>
+    </head>
+    <p>
+       Please choose what emotion fits your expression the best. Make as many different faces which helps the MM to become better and see the magic unfold.
+    </p>
+    <!-- This is where the magic happens -->
+    <!-- First we show what the webcam is seeing -->
+    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+    <!-- This is wehre the user can add training instances -->
+    <button id="class-a">Add Happy</button>
+    <button id="class-b">Add Sad</button>
+    <button id="class-c">Add Confused</button>
+    <button id="class-d">Add Disgusted</button>
+
+    <!-- Then the app is running which is doing the inference and returns the class and probability-->
+    <script src="index.js"></script>
+  </body>
+</html>
